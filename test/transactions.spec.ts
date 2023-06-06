@@ -1,11 +1,11 @@
-import { afterAll, beforeAll, it, describe, expect } from 'vitest'
+import { afterAll, beforeAll, it, describe, expect, beforeEach } from 'vitest'
 import request from 'supertest'
 import { app } from '../src/app'
-import { beforeEach } from 'node:test'
 import { execSync } from 'node:child_process'
 
 describe('Transactions routes', () => {
   beforeAll(async () => {
+    console.log('here')
     await app.ready()
   })
 
